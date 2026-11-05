@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#101827">
+<title>مِداد | مساحة مذاكرتك</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<style>
+:root{--bg:#f3f5f8;--panel:#fff;--ink:#172235;--muted:#788397;--line:#e7ebf1;--brand:#5367df;--brand2:#7485f2;--soft:#eef0ff;--green:#159b72;--red:#d65b68;--shadow:0 12px 35px rgba(24,39,75,.07)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0}.app{max-width:540px;margin:auto;min-height:100vh;padding-bottom:92px}.top{padding:22px 19px 16px;background:linear-gradient(135deg,#18243b,#303f69);color:#fff;border-radius:0 0 26px 26px}.toprow{display:flex;align-items:center;justify-content:space-between}.brand{font-size:20px;font-weight:850;letter-spacing:.2px}.brand small{display:block;font-size:11px;font-weight:500;opacity:.7;margin-top:3px}.avatar{width:42px;height:42px;border-radius:15px;background:#ffffff22;display:grid;place-items:center;font-weight:800}.welcome{margin-top:24px}.welcome h1{font-size:23px;margin:0 0 6px}.welcome p{margin:0;color:#cbd3e5;font-size:13px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:19px}.stat{background:#ffffff13;border:1px solid #ffffff1c;border-radius:15px;padding:11px 8px}.stat b{display:block;font-size:19px}.stat span{font-size:11px;color:#d0d8e8}.content{padding:18px}.section-head{display:flex;align-items:center;justify-content:space-between;margin:5px 0 12px}.section-head h2{font-size:16px;margin:0}.muted{color:var(--muted);font-size:12px}.card{background:var(--panel);border:1px solid var(--line);border-radius:19px;padding:15px;box-shadow:var(--shadow);margin-bottom:13px}.hero-focus{background:linear-gradient(140deg,#5367df,#7888f2);color:#fff;border:0;padding:18px}.hero-focus h3{margin:0 0 5px;font-size:17px}.hero-focus p{margin:0;color:#e1e5ff;font-size:12px}.timer{font-size:45px;font-weight:800;text-align:center;letter-spacing:2px;margin:18px 0 13px;font-variant-numeric:tabular-nums}.timer-actions{display:flex;gap:8px}.btn{padding:11px 14px;border-radius:12px;font-weight:700;font-size:13px;background:var(--soft);color:var(--brand)}.btn.primary{background:var(--brand);color:white}.btn.white{background:#fff;color:#465bd1}.btn.ghost{background:#ffffff20;color:#fff;border:1px solid #ffffff44}.btn.danger{background:#fff0f1;color:var(--red)}.btn.full{width:100%}.btn:disabled{opacity:.45;cursor:not-allowed}.row{display:flex;align-items:center;gap:10px}.between{justify-content:space-between}.grow{flex:1;min-width:0}.iconbox{width:42px;height:42px;border-radius:14px;background:var(--soft);display:grid;place-items:center;font-size:20px;flex-shrink:0}.task-title{font-size:14px;font-weight:750}.task-meta{font-size:11px;color:var(--muted);margin-top:4px}.progress{height:7px;border-radius:20px;background:#edf0f5;overflow:hidden;margin-top:12px}.progress i{height:100%;display:block;background:var(--brand);border-radius:20px}.quick{display:grid;grid-template-columns:1fr 1fr;gap:10px}.quick .card{margin:0;padding:14px}.quick .iconbox{margin-bottom:10px}.quick b{font-size:13px;display:block}.quick span{font-size:11px;color:var(--muted)}.nav{position:fixed;bottom:0;left:0;right:0;background:#ffffffed;backdrop-filter:blur(14px);border-top:1px solid var(--line);display:flex;justify-content:center;z-index:10}.navinner{width:min(540px,100%);display:grid;grid-template-columns:repeat(5,1fr);padding:8px 7px calc(8px + env(safe-area-inset-bottom))}.nav button{background:none;color:#8b95a6;font-size:10px;padding:5px 1px;display:grid;gap:4px;justify-items:center}.nav button strong{font-size:19px;font-weight:500}.nav button.active{color:var(--brand);font-weight:800}.page{display:none}.page.active{display:block}.field{width:100%;border:1px solid var(--line);background:#fbfcfe;border-radius:12px;padding:12px;color:var(--ink);outline:none;margin:6px 0 12px}.field:focus{border-color:var(--brand)}label{font-size:12px;font-weight:700;color:#566176}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.pill{font-size:10px;padding:5px 8px;border-radius:30px;background:#edf0f7;color:#647087}.pill.green{background:#e7f7f1;color:var(--green)}.pill.red{background:#fff0f1;color:var(--red)}.empty{text-align:center;padding:25px 10px;color:var(--muted);font-size:13px}.room{border:1px solid var(--line);border-radius:16px;padding:13px;margin-bottom:10px}.roomcode{font-size:11px;color:var(--muted);letter-spacing:1px}.member{display:inline-grid;place-items:center;width:29px;height:29px;border-radius:50%;background:#e9edff;color:#4558cb;font-size:11px;font-weight:800;margin-left:-5px;border:2px solid white}.overlay{position:fixed;inset:0;background:#10182780;display:none;align-items:flex-end;justify-content:center;z-index:30;padding:12px}.overlay.show{display:flex}.sheet{width:min(540px,100%);background:white;border-radius:23px 23px 18px 18px;padding:19px;max-height:88vh;overflow:auto}.sheet h3{margin:0 0 15px}.close{background:#f0f2f6;border-radius:10px;padding:7px 10px}.toast{position:fixed;bottom:100px;left:50%;transform:translateX(-50%);background:#18243b;color:#fff;padding:11px 16px;border-radius:12px;font-size:12px;opacity:0;pointer-events:none;transition:.2s;z-index:50;white-space:nowrap}.toast.show{opacity:1}.checkline{display:flex;align-items:center;gap:8px;font-size:12px;margin:9px 0;color:#596579}.checkline input{accent-color:var(--brand)}.divider{height:1px;background:var(--line);margin:13px 0}.settingrow{padding:12px 0;border-bottom:1px solid var(--line);font-size:13px}.notice{background:#fff8e9;color:#87652b;padding:11px;border-radius:12px;font-size:11px;line-height:1.7;margin-bottom:12px}.hidden{display:none!important}
+@media(min-width:600px){body{padding:20px 0}.app{border-radius:25px;overflow:hidden;box-shadow:0 20px 70px #17223520;background:var(--bg)}.nav{position:fixed}.top{border-radius:0 0 26px 26px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="top">
+ <div class="toprow"><div class="brand">مِداد <small>MIDĀD · مساحة مذاكرتك</small></div><div class="avatar" id="avatar">م</div></div>
+ <div class="welcome"><h1 id="hello">أهلاً بك في مِداد 👋</h1><p>خطوة صغيرة اليوم تصنع فرقاً كبيراً غداً</p></div>
+ <div class="stats">
+  <div class="stat"><b id="todayMinutes">0</b><span>دقيقة اليوم</span></div>
+  <div class="stat"><b id="doneTasks">0</b><span>مهام مكتملة</span></div>
+  <div class="stat"><b id="streak">0</b><span>جلسات مكتملة</span></div>
+ </div>
+</header>
+
+<main class="content">
+<section class="page active" id="home">
+ <div class="section-head"><h2>جلسة التركيز</h2><span class="pill" id="focusStatus">جاهز للبدء</span></div>
+ <div class="card hero-focus">
+  <h3 id="focusTitle">ابدأ جلسة مذاكرة</h3><p id="focusSub">اختر مهمة أو ابدأ جلسة حرة</p>
+  <div class="timer" id="timer">25:00</div>
+  <div class="timer-actions"><button class="btn white" style="flex:1" id="startPause">ابدأ التركيز</button><button class="btn ghost" id="resetTimer">إعادة</button></div>
+ </div>
+ <div class="section-head"><h2>خطتك اليوم</h2><button class="btn" onclick="openTask()">＋ إضافة مهمة</button></div>
+ <div id="homeTasks"></div>
+ <div class="section-head" style="margin-top:20px"><h2>اختصارات</h2></div>
+ <div class="quick">
+  <div class="card" onclick="showPage('rooms')"><div class="iconbox">👥</div><b>غرف الأصدقاء</b><span>ذاكروا معاً</span></div>
+  <div class="card" onclick="showPage('plan')"><div class="iconbox">🗓️</div><b>خطة المذاكرة</b><span>رتّب مهامك</span></div>
+  <div class="card" onclick="showPage('stats')"><div class="iconbox">📈</div><b>إنجازاتي</b><span>تابع تقدمك</span></div>
+  <div class="card" onclick="showPage('settings')"><div class="iconbox">⚙️</div><b>إعداداتي</b><span>خصص تجربتك</span></div>
+ </div>
+</section>
+
+<section class="page" id="plan">
+ <div class="section-head"><h2>خطة المذاكرة</h2><button class="btn primary" onclick="openTask()">＋ مهمة جديدة</button></div>
+ <div class="card"><div class="row between"><div><b>مهامك الدراسية</b><div class="muted">أنجز المطلوب خطوة بخطوة</div></div><span class="pill" id="taskCount">0 مهام</span></div></div>
+ <div id="allTasks"></div>
+</section>
+
+<section class="page" id="rooms">
+ <div class="section-head"><h2>غرف المذاكرة</h2><span class="pill">مع الأصدقاء</span></div>
+ <div class="notice">أنشئ غرفة وشارك رمزها مع أصدقائك. مزامنة الحضور والمؤقت بين الأجهزة تحتاج إلى تفعيل خادم الغرف.</div>
+ <div class="card">
+  <h3 style="margin:0 0 6px;font-size:15px">ابدأ غرفة جديدة</h3><p class="muted">اختر اسماً وادعُ أصدقاءك للمذاكرة</p>
+  <label>اسم الغرفة</label><input class="field" id="roomName" placeholder="مثلاً: مراجعة الرياضيات">
+  <button class="btn primary full" onclick="createRoom()">إنشاء غرفة</button>
+  <div class="divider"></div>
+  <label>لديك رمز دعوة؟</label><div class="row"><input class="field" id="joinCode" placeholder="أدخل رمز الغرفة" style="margin:6px 0;flex:1"><button class="btn" onclick="joinRoom()">انضمام</button></div>
+ </div>
+ <div class="section-head"><h2>غرفك</h2></div><div id="roomList"></div>
+</section>
+
+<section class="page" id="stats">
+ <div class="section-head"><h2>إنجازاتي</h2><span class="pill">ملخص شخصي</span></div>
+ <div class="card"><div class="muted">إجمالي وقت المذاكرة</div><div style="font-size:34px;font-weight:850;margin:8px 0" id="totalHours">0 د</div><div class="progress"><i id="totalProgress" style="width:0%"></i></div><div class="muted" style="margin-top:8px">استمر على وتيرتك الخاصة</div></div>
+ <div class="quick">
+  <div class="card"><div class="muted">المهام المكتملة</div><b style="font-size:25px" id="statDone">0</b></div>
+  <div class="card"><div class="muted">الجلسات المكتملة</div><b style="font-size:25px" id="statSessions">0</b></div>
+ </div>
+ <div class="card"><b>آخر الجلسات</b><div id="sessionHistory" class="muted" style="margin-top:12px">لا توجد جلسات بعد</div></div>
+</section>
+
+<section class="page" id="settings">
+ <div class="section-head"><h2>الإعدادات</h2></div>
+ <div class="card">
+  <label>اسم العرض</label><input class="field" id="displayName" placeholder="اسمك">
+  <label>مدة التركيز (دقيقة)</label><input class="field" id="focusLength" type="number" min="5" max="180" value="25">
+  <label>مدة الراحة (دقيقة)</label><input class="field" id="breakLength" type="number" min="1" max="60" value="5">
+  <button class="btn primary full" onclick="saveSettings()">حفظ الإعدادات</button>
+ </div>
+ <div class="card">
+  <b>حساب تيليجرام</b><div class="settingrow" id="telegramInfo">لم يتم فتح التطبيق من تيليجرام</div>
+  <div class="muted">عند تشغيله من البوت، يمكن قراءة بيانات المستخدم الأولية من Telegram Web App. يجب التحقق منها على الخادم قبل اعتماد تسجيل الدخول.</div>
+ </div>
+ <div class="card"><b>بيانات التطبيق</b><div class="settingrow">تُحفظ بيانات هذه النسخة على هذا الجهاز والمتصفح.</div><button class="btn danger full" onclick="clearData()">مسح بيانات هذا الجهاز</button></div>
+</section>
+</main>
+
+<nav class="nav"><div class="navinner">
+ <button class="active" data-page="home" onclick="showPage('home')"><strong>⌂</strong>الرئيسية</button>
+ <button data-page="plan" onclick="showPage('plan')"><strong>☷</strong>الخطة</button>
+ <button data-page="rooms" onclick="showPage('rooms')"><strong>♧</strong>الغرف</button>
+ <button data-page="stats" onclick="showPage('stats')"><strong>▥</strong>إنجازاتي</button>
+ <button data-page="settings" onclick="showPage('settings')"><strong>⚙</strong>الإعدادات</button>
+</div></nav>
+</div>
+
+<div class="overlay" id="taskModal" onclick="if(event.target===this)closeModal('taskModal')"><div class="sheet">
+ <div class="row between"><h3 id="taskModalTitle">إضافة مهمة</h3><button class="close" onclick="closeModal('taskModal')">✕</button></div>
+ <label>اسم المهمة</label><input class="field" id="taskTitle" placeholder="مثلاً: حل تمارين المحددات">
+ <div class="formgrid"><div><label>المادة</label><input class="field" id="taskSubject" placeholder="رياضيات"></div><div><label>المدة المتوقعة (دقيقة)</label><input class="field" id="taskDuration" type="number" min="5" value="45"></div></div>
+ <label>الهدف الأساسي</label><input class="field" id="goalMain" placeholder="إنجاز 10 مسائل">
+ <label>الهدف الإضافي (اختياري)</label><input class="field" id="goalExtra" placeholder="مراجعة الأخطاء">
+ <label class="checkline"><input type="checkbox" id="doubleGoal"> تفعيل عقدة النهاية المزدوجة (الأساسي + الإضافي)</label>
+ <button class="btn primary full" onclick="saveTask()">حفظ المهمة</button>
+</div></div>
+
+<div class="overlay" id="roomModal" onclick="if(event.target===this)closeModal('roomModal')"><div class="sheet">
+ <div class="row between"><h3 id="roomModalTitle">غرفة المذاكرة</h3><button class="close" onclick="closeModal('roomModal')">✕</button></div>
+ <div class="notice">الغرفة محفوظة في هذا الجهاز حالياً. مشاركة الغرفة الحقيقية بين عدة مستخدمين تتطلب خادماً متصلاً.</div>
+ <div class="card"><div class="muted">رمز الدعوة</div><div class="row between"><b style="font-size:25px;letter-spacing:3px" id="activeRoomCode">------</b><button class="btn" onclick="copyRoomCode()">نسخ الرمز</button></div></div>
+ <div class="row between"><b>جلسة الغرفة</b><span class="pill green">غرفة محلية</span></div>
+ <div class="timer" id="roomTimer" style="color:var(--brand)">25:00</div>
+ <div class="timer-actions"><button class="btn primary" style="flex:1" onclick="roomStart()">بدء مؤقت الغرفة</button><button class="btn" onclick="roomReset()">إعادة</button></div>
+ <div class="divider"></div><button class="btn danger full" onclick="leaveRoom()">مغادرة الغرفة</button>
+</div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+const KEY='mid_ad_app_v1';
+const defaultState={name:'طالب مِداد',focus:25,rest:5,tasks:[],rooms:[],sessions:[],totalSeconds:0,completedSessions:0,breakUntil:null};
+let state=loadState(), activeTask=null, editingTask=null, seconds=state.focus*60, timerMode='focus', timerRunning=false, timerInterval=null, activeRoom=null, roomSeconds=state.focus*60, roomInterval=null;
+function loadState(){try{return {...defaultState,...JSON.parse(localStorage.getItem(KEY)||'{}')}}catch(e){return {...defaultState}}}
+function save(){localStorage.setItem(KEY,JSON.stringify(state));render()}
+function el(id){return document.getElementById(id)}
+function toast(msg){const t=el('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2300)}
+function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));render();window.scrollTo(0,0)}
+function openTask(){editingTask=null;el('taskModalTitle').textContent='إضافة مهمة';['taskTitle','taskSubject','goalMain','goalExtra'].forEach(x=>el(x).value='');el('taskDuration').value=45;el('doubleGoal').checked=false;el('taskModal').classList.add('show')}
+function closeModal(id){el(id).classList.remove('show')}
+function saveTask(){const title=el('taskTitle').value.trim();if(!title)return toast('اكتب اسم المهمة أولاً');const t={id:editingTask||Date.now().toString(),title,subject:el('taskSubject').value.trim()||'عام',duration:Math.max(5,Number(el('taskDuration').value)||45),main:el('goalMain').value.trim(),extra:el('goalExtra').value.trim(),double:el('doubleGoal').checked,done:false,created:new Date().toISOString()};if(editingTask){state.tasks=state.tasks.map(x=>x.id===editingTask?{...x,...t}:x)}else state.tasks.unshift(t);closeModal('taskModal');save();toast('تم حفظ المهمة')}
+function toggleTask(id){const t=state.tasks.find(x=>x.id===id);if(!t)return;t.done=!t.done;save();toast(t.done?'أحسنت، أُنجزت المهمة':'أُعيد فتح المهمة')}
+function deleteTask(id){if(!confirm('هل تريد حذف هذه المهمة؟'))return;state.tasks=state.tasks.filter(t=>t.id!==id);save()}
+function taskCard(t){return `<div class="card"><div class="row"><div class="iconbox">📘</div><div class="grow"><div class="task-title">${esc(t.title)}</div><div class="task-meta">${esc(t.subject)} · ${t.duration} دقيقة ${t.double?'· نهاية مزدوجة':''}</div></div><span class="pill ${t.done?'green':''}">${t.done?'مكتملة':'قيد التنفيذ'}</span></div>${t.main?`<div class="task-meta" style="margin-top:10px">الهدف الأساسي: ${esc(t.main)}</div>`:''}${t.double&&t.extra?`<div class="task-meta">الهدف الإضافي: ${esc(t.extra)}</div>`:''}<div class="row" style="margin-top:12px"><button class="btn ${t.done?'':'primary'}" onclick="toggleTask('${t.id}')">${t.done?'إلغاء الإنجاز':'تم الإنجاز'}</button><button class="btn" onclick="startTask('${t.id}')">ابدأ المذاكرة</button><button class="btn danger" onclick="deleteTask('${t.id}')">حذف</button></div></div>`}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function startTask(id){activeTask=id;const t=state.tasks.find(x=>x.id===id);el('focusTitle').textContent=t.title;el('focusSub').textContent=t.subject+' · '+t.duration+' دقيقة';seconds=t.duration*60;timerMode='focus';timerRunning=false;clearInterval(timerInterval);updateTimer();showPage('home');toast('تم تجهيز جلسة المهمة')}
+function updateTimer(){const m=Math.floor(seconds/60),s=seconds%60;el('timer').textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');el('focusStatus').textContent=timerRunning?'جلسة نشطة':timerMode==='break'?'وقت الراحة':'جاهز للبدء';el('startPause').textContent=timerRunning?'إيقاف مؤقت': 'متابعة';if(!timerRunning&&seconds=== (timerMode==='focus'?(activeTask?((state.tasks.find(t=>t.id===activeTask)||{}).duration||state.focus)*60:state.focus*60):state.rest*60))el('startPause').textContent='ابدأ التركيز'}
+function startPause(){if(timerRunning){timerRunning=false;clearInterval(timerInterval);updateTimer();return}timerRunning=true;el('startPause').textContent='إيقاف مؤقت';timerInterval=setInterval(()=>{if(seconds>0){seconds--;if(timerMode==='focus')state.totalSeconds++;updateTimer()}else{clearInterval(timerInterval);timerRunning=false;if(timerMode==='focus'){state.completedSessions++;state.sessions.unshift({date:new Date().toLocaleString('ar'),minutes:Math.round((activeTask?(state.tasks.find(t=>t.id===activeTask)?.duration||state.focus):state.focus)),task:activeTask?(state.tasks.find(t=>t.id===activeTask)?.title||'جلسة حرة'):'جلسة حرة'});timerMode='break';seconds=state.rest*60;save();toast('انتهت جلسة التركيز. حان وقت الراحة');}else{timerMode='focus';seconds=state.focus*60;toast('انتهت الراحة. يمكنك بدء جلسة جديدة')}updateTimer()}},1000)}
+function resetTimer(){timerRunning=false;clearInterval(timerInterval);timerMode='focus';const t=state.tasks.find(t=>t.id===activeTask);seconds=(t?t.duration:state.focus)*60;updateTimer()}
+function createRoom(){const name=el('roomName').value.trim();if(!name)return toast('اكتب اسم الغرفة');const code=Math.random().toString(36).slice(2,8).toUpperCase();const r={id:Date.now().toString(),name,code,created:new Date().toISOString()};state.rooms.unshift(r);save();el('roomName').value='';openRoom(r.id)}
+function joinRoom(){const code=el('joinCode').value.trim().toUpperCase();if(!code)return toast('أدخل رمز الغرفة');const r=state.rooms.find(x=>x.code===code);if(!r)return toast('لم يتم العثور على غرفة بهذا الرمز في هذا الجهاز');openRoom(r.id)}
+function openRoom(id){activeRoom=state.rooms.find(r=>r.id===id);if(!activeRoom)return;roomSeconds=state.focus*60;el('roomModalTitle').textContent=activeRoom.name;el('activeRoomCode').textContent=activeRoom.code;updateRoomTimer();el('roomModal').classList.add('show')}
+function copyRoomCode(){const c=activeRoom?.code;if(!c)return;if(navigator.clipboard?.writeText){navigator.clipboard.writeText(c).then(()=>toast('تم نسخ الرمز')).catch(()=>toast('تعذر النسخ'))}else toast('رمز الغرفة: '+c)}
+function updateRoomTimer(){el('roomTimer').textContent=String(Math.floor(roomSeconds/60)).padStart(2,'0')+':'+String(roomSeconds%60).padStart(2,'0')}
+function roomStart(){if(roomInterval)return;roomInterval=setInterval(()=>{if(roomSeconds>0){roomSeconds--;updateRoomTimer()}else{clearInterval(roomInterval);roomInterval=null;toast('انتهى مؤقت الغرفة')}},1000);toast('بدأ مؤقت الغرفة على هذا الجهاز')}
+function roomReset(){clearInterval(roomInterval);roomInterval=null;roomSeconds=state.focus*60;updateRoomTimer()}
+function leaveRoom(){if(activeRoom){state.rooms=state.rooms.filter(r=>r.id!==activeRoom.id);save()}clearInterval(roomInterval);roomInterval=null;activeRoom=null;closeModal('roomModal');toast('تمت إزالة الغرفة من قائمتك المحلية')}
+function saveSettings(){state.name=el('displayName').value.trim()||'طالب مِداد';state.focus=Math.min(180,Math.max(5,Number(el('focusLength').value)||25));state.rest=Math.min(60,Math.max(1,Number(el('breakLength').value)||5));if(!timerRunning){seconds=state.focus*60;timerMode='focus';updateTimer()}save();toast('تم حفظ الإعدادات')}
+function clearData(){if(!confirm('سيتم حذف المهام والغرف والإحصائيات المحفوظة على هذا الجهاز. هل تريد المتابعة؟'))return;localStorage.removeItem(KEY);state={...defaultState};activeTask=null;resetTimer();save();toast('تم مسح البيانات')}
+function render(){el('hello').textContent='أهلاً '+state.name+' 👋';el('avatar').textContent=(state.name||'م').slice(0,1);el('todayMinutes').textContent=Math.floor(state.totalSeconds/60);el('doneTasks').textContent=state.tasks.filter(t=>t.done).length;el('streak').textContent=state.completedSessions;el('taskCount').textContent=state.tasks.length+' مهام';const html=state.tasks.length?state.tasks.map(taskCard).join(''):'<div class="empty">لا توجد مهام بعد. أضف أول مهمة وابدأ خطتك 🌱</div>';el('allTasks').innerHTML=html;el('homeTasks').innerHTML=state.tasks.length?state.tasks.slice(0,3).map(taskCard).join(''):'<div class="empty">خطتك فارغة حالياً</div>';el('roomList').innerHTML=state.rooms.length?state.rooms.map(r=>`<div class="room"><div class="row between"><div><b>${esc(r.name)}</b><div class="roomcode">رمز: ${r.code}</div></div><button class="btn" onclick="openRoom('${r.id}')">فتح الغرفة</button></div></div>`).join(''):'<div class="empty">لا توجد غرف بعد. أنشئ غرفة وابدأ المذاكرة مع أصدقائك.</div>';const total=Math.floor(state.totalSeconds/60);el('totalHours').textContent=total>=60?Math.floor(total/60)+' س '+(total%60)+' د':total+' د';el('totalProgress').style.width=Math.min(100,total/600*100)+'%';el('statDone').textContent=state.tasks.filter(t=>t.done).length;el('statSessions').textContent=state.completedSessions;el('sessionHistory').innerHTML=state.sessions.length?state.sessions.slice(0,8).map(s=>`<div class="row between" style="padding:8px 0;border-bottom:1px solid var(--line)"><span>${esc(s.task)}<small style="display:block;margin-top:3px">${esc(s.date)}</small></span><b>${s.minutes} د</b></div>`).join(''):'لا توجد جلسات بعد';el('displayName').value=state.name;el('focusLength').value=state.focus;el('breakLength').value=state.rest}
+function initTelegram(){const tg=window.Telegram?.WebApp;if(!tg){el('telegramInfo').textContent='لم يتم فتح التطبيق من تيليجرام';return}tg.ready();tg.expand();const u=tg.initDataUnsafe?.user;if(u){const n=[u.first_name,u.last_name].filter(Boolean).join(' ');if(n&&!state.name.startsWith('طالب'))state.name=n;else if(n&&state.name==='طالب مِداد')state.name=n;el('telegramInfo').textContent='تم اكتشاف حساب تيليجرام: '+n+' · ID: '+u.id;render()}else el('telegramInfo').textContent='تم فتح Telegram Mini App، بانتظار بيانات الحساب'}
+initTelegram();render();updateTimer();
+</script>
+</body>
+</html>
